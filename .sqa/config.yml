@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/mychem/mychem-code:
+      branch: master
+      repo: https://github.com/mychem/mychem-code.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/mychem/mychem-code git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-ruby-liger.sh
+        container: qc.acc_geeky-beige-albatross
+  QC.Doc:
+    repos:
+      github.com/mychem/mychem-code find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-brass-ant.sh
+        container: qc.doc_boozy-firebrick-neanderthal
+      github.com/mychem/mychem-code git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-cream-chinook.sh
+        container: qc.doc_paltry-teal-penguin
+      github.com/mychem/mychem-code restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-brown-cougar.sh
+        container: qc.doc_hazy-periwinkle-chin
+  QC.Lic:
+    repos:
+      github.com/mychem/mychem-code licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-cream-alligator.sh
+        container: qc.lic_sunny-emerald-lynx
+  QC.Met:
+    repos:
+      github.com/mychem/mychem-code validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-wisteria-crab.sh
+        container: qc.met_wimpy-myrtle-walrus
+  QC.Sty:
+    repos:
+      github.com/mychem/mychem-code jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-carmine-catfish.sh
+        container: qc.sty_gamy-beige-wolfhound
+      github.com/mychem/mychem-code oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-aqua-dragon.sh
+        container: qc.sty_paltry-cerise-wildebeest
+  QC.Ver:
+    repos:
+      github.com/mychem/mychem-code get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-magenta-budgerigar.sh
+        container: qc.ver_lumpy-cinnabar-dormouse
+timeout: 5400
