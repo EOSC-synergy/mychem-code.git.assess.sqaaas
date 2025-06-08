@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/mychem/mychem-code git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-periwinkle-cat.sh
-        container: qc.acc_breezy-burgundy-goat
+        - /usr/bin/env sh .sqa/script.foggy-vermilion-uguisu.sh
+        container: qc.acc_scanty-tangerine-zebu
   QC.Doc:
     repos:
       github.com/mychem/mychem-code find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-rust-ragdoll.sh
-        container: qc.doc_muzzy-charcoal-frigatebird
+        - /usr/bin/env sh .sqa/script.hilly-russet-ragdoll.sh
+        container: qc.doc_wheezy-orchid-affenpinscher
       github.com/mychem/mychem-code git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-taupe-wolverine.sh
-        container: qc.doc_stuffy-platinum-goat
+        - /usr/bin/env sh .sqa/script.shaky-brown-flamingo.sh
+        container: qc.doc_nippy-amethyst-chihuahua
       github.com/mychem/mychem-code restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-amber-goat.sh
-        container: qc.doc_sleazy-xanthic-tetra
+        - /usr/bin/env sh .sqa/script.wheezy-pear-chihuahua.sh
+        container: qc.doc_wimpy-chartreuse-newt
   QC.Lic:
     repos:
       github.com/mychem/mychem-code licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-ivory-angelfish.sh
-        container: qc.lic_skinny-magenta-ragdoll
+        - /usr/bin/env sh .sqa/script.crappy-orchid-moth.sh
+        container: qc.lic_cloudy-charcoal-alligator
   QC.Met:
     repos:
       github.com/mychem/mychem-code validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-yellow-lemming.sh
-        container: qc.met_freaky-alizarin-crab
+        - /usr/bin/env sh .sqa/script.cranky-rust-anteater.sh
+        container: qc.met_frumpy-cornflower-earwig
   QC.Sty:
     repos:
       github.com/mychem/mychem-code jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-peach-owl.sh
-        container: qc.sty_sloppy-apricot-malamute
+        - /usr/bin/env sh .sqa/script.wiggy-ecru-retriever.sh
+        container: qc.sty_beady-violet-markhor
       github.com/mychem/mychem-code oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-flax-zonkey.sh
-        container: qc.sty_shaggy-crimson-foxhound
+        - /usr/bin/env sh .sqa/script.craggy-ochre-bear.sh
+        container: qc.sty_stealthy-turquoise-falcon
   QC.Ver:
     repos:
       github.com/mychem/mychem-code get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-chocolate-turkey.sh
-        container: qc.ver_trippy-coral-quoll
+        - /usr/bin/env sh .sqa/script.cozy-wheat-hornet.sh
+        container: qc.ver_sleazy-celadon-chin
 timeout: 5400
